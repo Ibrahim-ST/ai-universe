@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import {
-  Bars4Icon,
+  Bars3Icon,
   BoltIcon,
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
@@ -18,7 +18,7 @@ const PrivateLayout = () => {
   const menuIconClick = () => {
     setMenuCollapse(!menuCollapse);
   };
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
@@ -62,7 +62,7 @@ const PrivateLayout = () => {
             {menuCollapse ? (
               <ChevronDoubleRightIcon className="h-6 w-6 text-gray-950 rounded-full hover:bg-gray-200" />
             ) : (
-              <Bars4Icon className="h-6 w-6 text-gray-900 rounded-full hover:bg-gray-200" />
+              <Bars3Icon className="h-6 w-6 text-gray-900 rounded-full hover:bg-gray-200" />
             )}
           </div>
         </div>
