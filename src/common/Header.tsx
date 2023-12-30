@@ -14,6 +14,9 @@ const Header = () => {
         <a className="nav-items" href="/latest-ai-news">
           Latest AI News
         </a>
+        <a className="nav-items" href="/dashboard">
+          Dashboard
+        </a>
         <button className="nav-items">Join Discord</button>
         <button className="inline-block px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700">
           Subscribe
