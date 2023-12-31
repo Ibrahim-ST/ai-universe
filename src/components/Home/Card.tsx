@@ -6,10 +6,10 @@ import {
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
-const Card = () => {
+const Card = ({tools:aiTools}) => {
   return (
-    <div className="grid grid-cols-4 gap-4 m-10">
-      {aiTools?.data?.map((tool, index) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-10">
+      {aiTools?.map((tool, index) => (
         <div key={index} className="rounded-lg border shadow-sm">
           {/* image section  */}
           <div className="w-full h-[250px] rounded-none  ">
