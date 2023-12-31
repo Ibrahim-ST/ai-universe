@@ -2,6 +2,8 @@ import Card from "./Card";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import Loading from "../shared/Loading";
+import { Toast } from "flowbite-react"; 
+import { ExclamationTriangleIcon } from "@heroicons/react/24/solid";
 
 const Tool = () => {
   const [page, setPage] = useState(1);
@@ -46,7 +48,15 @@ const Tool = () => {
       <Card tools={tools} />
       <div ref={ref}>
         {noMoreData ? (
-          <span className="text-center">No more data available</span>
+          <Toast className="flex items-center justify-center">
+            <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-500 dark:bg-green-800 dark:text-green-200">
+              <ExclamationTriangleIcon className="h-5 w-5" />
+            </div>
+            <div className="ml-3 text-sm font-normal">
+              No more data available
+            </div>
+            <Toast.Toggle />
+          </Toast>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-10">
             <Loading />

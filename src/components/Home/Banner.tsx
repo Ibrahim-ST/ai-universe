@@ -33,14 +33,14 @@ const Banner = () => {
           The Largest Awesome AI Platform Directory, Updated Daily
         </p>
       </div>
-      <div className="flex gap-4 justify-center">
+      <div className="flex flex-wrap gap-4 justify-center">
         <a href="" className="button">
           <WrenchScrewdriverIcon
             className="text-lg mr-2"
             height="1em"
             width="1em"
           />
-          tools added today
+          Tools added today
         </a>
         <a href="" className="button">
           <NewspaperIcon className="text-lg mr-2" height="1em" width="1em" />
